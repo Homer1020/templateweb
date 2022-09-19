@@ -5,6 +5,14 @@
 
 @for $i from 1 through 12 {
   .col-#{$i} {
-    width: #{($i / 12) * 100%};
+    width: ($i / 12) * 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: ($i / 12) * 100%;
+    }
   }
 }

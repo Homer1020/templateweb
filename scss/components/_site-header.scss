@@ -1,23 +1,49 @@
 .site-header {
   background-color: var(--colorPrimary, lightseagreen);
   color: white;
+  padding: 1rem;
+
+  @media (min-width: 992px) {
+    padding: 0;
+    .navbar {
+      display: block;
+    }
+  }
 
   &__actions {
     margin-left: auto;
     display: flex;
     align-items: center;
+
+    .btn {
+      display: none;
+      @media (min-width: 992px) {
+        display: inline-block;
+      }
+    }
     
     a:not(:last-child) {
       margin-right: 20px;
     }
   }
 
+  .login-icon {
+    @extend .shopping-cart;
+    margin-right: 0 !important;
+    @media (min-width: 992px) {
+      display: none !important;
+    }
+  }
+
   .shopping-cart {
     color: inherit;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: none;
     display: inline-block;
     position: relative;
+    @media (min-width: 992px) {
+      font-size: 1.5rem;
+    }
     &__badge {
       font-size: 13px;
       top: -10px;
@@ -37,5 +63,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+
+  .brand {
+    margin-right: 30px;
   }
 }
