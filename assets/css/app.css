@@ -1,6 +1,6 @@
 :root {
-  --colorPrimary: lightseagreen;
-  --colorSecondary: slateblue;
+  --colorPrimary: #bf0e09;
+  --colorSecondary: #BABF1D;
   --violeta: #404bd9;
   --celeste: #5ac8fa;
   --black: #1c1c1e;
@@ -8,6 +8,8 @@
   --amarillo: #fcad18;
   --amarillo-hover: #ffb600;
   --zTop: 100;
+  --zFront: 50;
+  --zBack: -1;
 }
 
 html {
@@ -33,6 +35,14 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
+}
+
+input {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
 }
 
 .site-header {
@@ -85,6 +95,7 @@ h6 {
   }
 }
 .site-header .shopping-cart__badge {
+  color: #000;
   font-size: 13px;
   top: -10px;
   right: -10px;
@@ -96,6 +107,7 @@ h6 {
   text-align: center;
   line-height: 18px;
   overflow: hidden;
+  font-weight: bold;
 }
 .site-header .container {
   display: flex;
@@ -104,6 +116,9 @@ h6 {
 }
 .site-header .brand {
   margin-right: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
 }
 
 .navbar__link {
@@ -206,6 +221,7 @@ h6 {
   border-color: #fff;
 }
 .btn--secondary {
+  color: #000;
   border-color: var(--colorSecondary);
   background-color: var(--colorSecondary);
 }
@@ -316,8 +332,29 @@ h6 {
   }
 }
 .l-hero-form {
-  min-height: 90vh;
   background-position: top center;
+  position: relative;
+  min-height: 80vh;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .l-hero-form {
+    padding: 2rem 0;
+  }
+}
+.l-hero-form .img-bg {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .l-hero-form .img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: var(--zBack);
+    object-fit: cover;
+    object-position: top left;
+  }
 }
 .l-hero-form .grid {
   display: flex;
@@ -325,6 +362,14 @@ h6 {
 }
 .l-hero-form .grid .col-md-4 {
   margin-left: auto;
+}
+.l-hero-form .card {
+  margin-top: 2rem;
+}
+@media (min-width: 992px) {
+  .l-hero-form .card {
+    margin-top: 0;
+  }
 }
 .l-hero-form .card h2 {
   font-size: 30px;
@@ -339,6 +384,10 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
+}
+
+.t-center {
+  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */

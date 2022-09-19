@@ -45,6 +45,7 @@
       font-size: 1.5rem;
     }
     &__badge {
+      color: #000;
       font-size: 13px;
       top: -10px;
       right: -10px;
@@ -56,6 +57,7 @@
       text-align: center;
       line-height: 18px;
       overflow: hidden;
+      font-weight: bold;
     }
   }
 
@@ -67,5 +69,8 @@
 
   .brand {
     margin-right: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
   }
 }

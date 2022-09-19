@@ -2,8 +2,8 @@ $colorPrimary: lightseagreen;
 $colorSecondary: slateblue;
 
 :root {
-  --colorPrimary: lightseagreen;
-  --colorSecondary: slateblue;
+  --colorPrimary: #bf0e09;
+  --colorSecondary: #BABF1D;
 
   --violeta: #404bd9;
   --celeste: #5ac8fa;
@@ -13,4 +13,6 @@ $colorSecondary: slateblue;
   --amarillo-hover: #ffb600;
 
   --zTop: 100;
+  --zFront: 50;
+  --zBack: -1;
 }
