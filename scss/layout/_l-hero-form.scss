@@ -1,0 +1,22 @@
+.l-hero-form {
+  min-height: 90vh;
+
+  .grid {
+    display: flex;
+    width: 100%;
+
+    .col-4 {
+      margin-left: auto;
+    }
+  }
+
+  .card {
+    h2 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 18px;
+      font-weight: bold;
+      color: var(--black);
+    }
+  }
+}

@@ -1,0 +1,210 @@
+:root {
+  --colorPrimary: lightseagreen;
+  --colorSecondary: slateblue;
+  --violeta: #404bd9;
+  --celeste: #5ac8fa;
+  --black: #1c1c1e;
+  --gris: #4f4f4f;
+  --amarillo: #fcad18;
+  --amarillo-hover: #ffb600;
+}
+
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+.site-header {
+  background-color: var(--colorPrimary, lightseagreen);
+  color: white;
+}
+.site-header__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.site-header__actions a:not(:last-child) {
+  margin-right: 20px;
+}
+.site-header .shopping-cart {
+  color: inherit;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.site-header .shopping-cart__badge {
+  font-size: 13px;
+  top: -10px;
+  right: -10px;
+  background-color: var(--colorSecondary);
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  overflow: hidden;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar__link {
+  font-size: 1rem;
+  display: inline-block;
+  padding: 22px 0;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+}
+.navbar__link:hover {
+  color: var(--colorSecondary);
+}
+.navbar__link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+}
+.btn--outline {
+  background-color: transparent;
+}
+.btn--outline-white {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.btn--outline-white:hover {
+  border-color: #fff;
+}
+.btn--secondary {
+  border-color: var(--colorSecondary);
+  background-color: var(--colorSecondary);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.35rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
+}
+.card__body {
+  padding: 25px 20px 35px;
+}
+
+.hero {
+  padding: 2rem 0;
+  background-size: cover;
+  background-position: top center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.l-hero-form {
+  min-height: 90vh;
+}
+.l-hero-form .grid {
+  display: flex;
+  width: 100%;
+}
+.l-hero-form .grid .col-4 {
+  margin-left: auto;
+}
+.l-hero-form .card h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,28 @@
+.btn {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+
+  &--outline {
+    background-color: transparent;
+    &-white {
+      color: #fff;
+      border-color: rgba(#fff, .5);
+      &:hover {
+        border-color: #fff;
+      }
+    }
+  }
+
+  &--secondary {
+    border-color: var(--colorSecondary);
+    background-color: var(--colorSecondary);
+  }
+}

@@ -1,0 +1,41 @@
+.site-header {
+  background-color: var(--colorPrimary, lightseagreen);
+  color: white;
+
+  &__actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    
+    a:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .shopping-cart {
+    color: inherit;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    &__badge {
+      font-size: 13px;
+      top: -10px;
+      right: -10px;
+      background-color: var(--colorSecondary);
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 18px;
+      overflow: hidden;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
