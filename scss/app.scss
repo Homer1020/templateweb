@@ -5,6 +5,7 @@
 
 // APP COMPONENTS
 @import 'components/site-header';
+@import 'components/site-footer';
 @import 'components/navbar';
 
 // COMPONENTS
@@ -13,6 +14,8 @@
 @import 'components/hero';
 @import 'components/card';
 @import 'components/page-section';
+@import 'components/membership';
+@import 'components/list-membership';
 
 // LAYOUT
 @import 'layout/grid';

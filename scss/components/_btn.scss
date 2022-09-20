@@ -43,6 +43,14 @@
         color: #fff;
       }
     }
+    &-secondary {
+      color: var(--colorSecondary);
+      border-color: var(--colorSecondary);
+      &:hover {
+        background-color: var(--colorSecondary);
+        color: #fff;
+      }
+    }
   }
 
   &--secondary {
