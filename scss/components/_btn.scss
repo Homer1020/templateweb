@@ -10,6 +10,22 @@
   border-width: 2px;
   border-style: solid;
 
+  &--full {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--rounded {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+  }
+
   &--outline {
     background-color: transparent;
     &-white {
@@ -17,6 +33,14 @@
       border-color: rgba(#fff, .5);
       &:hover {
         border-color: #fff;
+      }
+    }
+    &-primary {
+      color: var(--colorPrimary);
+      border-color: var(--colorPrimary);
+      &:hover {
+        background-color: var(--colorPrimary);
+        color: #fff;
       }
     }
   }

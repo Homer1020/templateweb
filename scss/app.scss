@@ -9,12 +9,23 @@
 
 // COMPONENTS
 @import 'components/btn';
-@import 'components/card';
+@import 'components/hero-form';
 @import 'components/hero';
+@import 'components/card';
+@import 'components/page-section';
 
 // LAYOUT
 @import 'layout/grid';
 @import 'layout/l-hero-form';
+@import 'layout/l-grid-courses';
 
 // UTILITIES
 @import 'utilities';
+
+.main {
+  padding: 5rem 0;
+}
+
+.prices {
+  margin-bottom: 20px;
+}

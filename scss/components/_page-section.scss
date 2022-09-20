@@ -1,0 +1,32 @@
+.page-section {
+  &__title {
+    font-size: 45px;
+    color: var(--sectionColor, var(--colorPrimary));
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__header {
+    margin-bottom: 2rem;
+  }
+}
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  h3 {
+    color: #000;
+    font-size: 35px;
+    margin-right: 18px;
+  }
+
+  a {
+    color: var(--colorPrimary);
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--colorPrimary);
+  }
+}
