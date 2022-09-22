@@ -55,6 +55,10 @@ strong {
   color: var(--black);
 }
 
+a {
+  color: var(--colorPrimary);
+}
+
 .site-header {
   background-color: var(--colorPrimary, lightseagreen);
   color: white;
@@ -311,6 +315,12 @@ strong {
 .hero-form__body {
   padding: 25px 20px 35px;
 }
+.hero-form .material-input {
+  margin-bottom: 1rem;
+}
+.hero-form .btn {
+  padding: 0.7em 4em;
+}
 
 .hero {
   padding: 2rem 0;
@@ -449,6 +459,71 @@ strong {
   color: var(--colorSecondary);
 }
 
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+.material-input {
+  font-size: 14px;
+  position: relative;
+}
+.material-input input {
+  width: 100%;
+  border: none;
+  border: 1px solid var(--colorSecondary);
+  padding: 0.7em 1em;
+  font-size: 1em;
+  padding-top: 1.5em;
+  border-radius: 0.25rem;
+}
+.material-input label {
+  font-weight: 500;
+  text-align: left;
+  pointer-events: none;
+  color: #bbb;
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  width: 100%;
+  transform: translateY(-50%);
+  transition-property: font-size, top, left, color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.material-input input:focus + label,
+.material-input input.non-empty + label {
+  font-size: 0.7em;
+  top: 1.2em;
+  left: 1.5em;
+  color: var(--colorSecondary);
+}
+.material-input input.non-empty:valid + label {
+  color: seagreen;
+}
+.material-input input.non-empty:invalid + label {
+  color: var(--colorPrimary);
+}
+.material-input input.non-empty:valid {
+  border-color: lightgreen;
+}
+.material-input input.non-empty:invalid {
+  border-color: var(--colorPrimary);
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+.checkbox input[type=checkbox] {
+  border-radius: 0;
+}
+.checkbox span {
+  margin-left: 10px;
+  line-height: 1;
+  font-size: 13px;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -573,10 +648,23 @@ strong {
   margin-left: auto;
 }
 
-.l-grid-courses {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+.l-grid-courses > * {
+  margin-bottom: 20px;
+}
+@media (min-width: 678px) {
+  .l-grid-courses {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .l-grid-courses > * {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .l-grid-courses {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .container {

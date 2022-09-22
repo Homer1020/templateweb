@@ -1,0 +1,50 @@
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+.material-input {
+  font-size: 14px;
+  position: relative;
+  input {
+    width: 100%;
+    border: none;
+    border: 1px solid var(--colorSecondary);
+    padding: .7em 1em;
+    font-size: 1em;
+    padding-top: 1.5em;
+    border-radius: .25rem;
+  }
+  label {
+    font-weight: 500;
+    text-align: left;
+    pointer-events: none;
+    color: #bbb;
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    width: 100%;
+    transform: translateY(-50%);
+    transition-property: font-size, top, left, color;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  input:focus + label,
+  input.non-empty + label{
+    font-size: .7em;
+    top: 1.2em;
+    left: 1.5em;
+    color: var(--colorSecondary);
+  }
+  input.non-empty:valid + label {
+    color: seagreen;
+  }
+  input.non-empty:invalid + label {
+    color: var(--colorPrimary);
+  }
+  input.non-empty:valid {
+    border-color: lightgreen;
+  }
+  input.non-empty:invalid {
+    border-color: var(--colorPrimary);
+  }
+}
