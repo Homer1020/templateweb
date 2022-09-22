@@ -18,6 +18,7 @@
 @import 'components/list-membership';
 @import 'components/material-input';
 @import 'components/checkbox';
+@import 'components/card-icon';
 
 // LAYOUT
 @import 'layout/grid';
@@ -33,4 +34,32 @@
 
 .prices {
   margin-bottom: 20px;
+}
+
+.owl-theme {
+  position: relative;
+  .owl-nav {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    button {
+      padding: 0;
+      color: rgba(102,102,102,.5);
+      transition: color .1s ease-in-out;
+      width: 40px;
+      height: 40px;
+      background-color: #f2f2f2;
+      box-shadow: 0 0 10px #979797;
+      border-radius: 20px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

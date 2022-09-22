@@ -352,21 +352,54 @@ a {
 }
 .btn--whatsapp {
   background-color: #34C759;
-  position: fixed;
-  z-index: var(--zFront);
-  bottom: 1rem;
   border-color: #34C759;
   color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  height: 45px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 5px 20px;
 }
 .btn--whatsapp i {
   margin-left: 10px;
   font-size: 1.5rem;
+}
+@media (max-width: 992px) {
+  .btn--whatsapp {
+    width: 45px;
+    padding: 0;
+  }
+  .btn--whatsapp span {
+    display: none;
+  }
+  .btn--whatsapp i {
+    margin: 0;
+  }
+}
+
+.fixed-actions {
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: var(--zFront);
+  position: fixed;
+  bottom: 1rem;
+}
+.fixed-actions .container {
+  display: flex;
+  align-items: center;
+}
+.fixed-actions .btn {
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.fixed-actions .btn--info {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+@media (min-width: 992px) {
+  .fixed-actions .btn--info {
+    display: none;
+  }
 }
 
 .hero-form {
@@ -669,6 +702,42 @@ input:focus, textarea:focus, button:focus {
   border-color: var(--colorPrimary);
 }
 
+.form-control {
+  font-size: 16px;
+  padding: 0.9em 1em;
+  width: 100%;
+  border: 1px solid var(--colorSecondary);
+  border-radius: 0.25rem;
+}
+.form-control:focus {
+  outline: none;
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: var(--colorSecondary);
+  color: white;
+}
+select.form-control option {
+  background-color: #fff;
+  color: var(--gris);
+}
+
+.select {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.select i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  color: #fff;
+}
+
 .checkbox {
   display: flex;
   align-items: flex-start;
@@ -681,6 +750,22 @@ input:focus, textarea:focus, button:focus {
   margin-left: 10px;
   line-height: 1;
   font-size: 13px;
+}
+
+.card-icon {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 40px 30px 35px;
+  color: var(--colorPrimary);
+  min-height: 100%;
+  font-weight: 500;
+}
+.card-icon h3 {
+  font-family: poppins, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 25px 0 15px;
 }
 
 .grid {
@@ -860,6 +945,33 @@ input:focus, textarea:focus, button:focus {
 
 .prices {
   margin-bottom: 20px;
+}
+
+.owl-theme {
+  position: relative;
+}
+.owl-theme .owl-nav {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.owl-theme .owl-nav button {
+  padding: 0;
+  color: rgba(102, 102, 102, 0.5);
+  transition: color 0.1s ease-in-out;
+  width: 40px;
+  height: 40px;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px #979797;
+  border-radius: 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=app.css.map */

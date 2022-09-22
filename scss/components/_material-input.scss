@@ -48,3 +48,40 @@ input:focus, textarea:focus, button:focus {
     border-color: var(--colorPrimary);
   }
 }
+
+.form-control {
+  font-size: 16px;
+  padding: 0.9em 1em;
+  width: 100%;
+  border: 1px solid var(--colorSecondary);
+  border-radius: .25rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: var(--colorSecondary);
+  color: white;
+
+  option {
+    background-color: #fff;
+    color: var(--gris);
+  }
+}
+
+.select {
+  position: relative;
+  margin-bottom: 1rem;
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    color: #fff;
+  }
+}
