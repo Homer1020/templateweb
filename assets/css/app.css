@@ -140,6 +140,81 @@ a {
   background-color: #1c1c1e;
   color: #fff;
 }
+@media (min-width: 992px) {
+  .site-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.site-footer__top {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer__top .img-b {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  display: block;
+}
+.site-footer__nav a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+.site-footer__nav a:not(:first-child) {
+  margin-top: 25px;
+}
+@media (min-width: 992px) {
+  .site-footer__nav a {
+    display: inline-block;
+  }
+  .site-footer__nav a:not(:first-child) {
+    margin-top: 0;
+    margin-left: 25px;
+  }
+}
+.site-footer .follow {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .site-footer .follow {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+.site-footer .follow p {
+  color: #828282;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0;
+  margin-right: 25px;
+}
+.site-footer .follow a {
+  color: #fff;
+}
+.site-footer .follow i {
+  font-size: 26px;
+}
+.site-footer .partof p {
+  margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  .site-footer .partof {
+    display: flex;
+    align-items: center;
+  }
+  .site-footer .partof p {
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+}
 
 .navbar__link {
   font-size: 1rem;
@@ -357,6 +432,39 @@ a {
 }
 .card__img img {
   width: 100%;
+  display: block;
+}
+.card--program .card__img {
+  position: relative;
+}
+.card--program .card__img::after {
+  content: "";
+  background-image: linear-gradient(180deg, rgba(28, 28, 30, 0) 0, #1c1c1e 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card--program .card__img-title {
+  z-index: 5;
+  width: calc(100% - 30px);
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  position: absolute;
+}
+.card__text {
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.card__link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--colorPrimary);
+  border-bottom: 1px solid var(--colorPrimary);
 }
 
 .price span:first-child {
