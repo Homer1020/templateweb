@@ -34,3 +34,16 @@
     }
   }
 }
+
+.price {
+  span:first-child {
+    font-size: 13px;
+    text-decoration: line-through;
+  }
+  span:last-child {
+    font-size: 18px;
+    color: #34C759;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+}

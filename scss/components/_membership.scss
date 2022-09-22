@@ -29,13 +29,33 @@
   }
   &__foot {
     margin-top: auto;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
     .price {
-      margin: 0 1rem;
+      margin: 1rem 0;
+    }
+    @media (max-width: 992px) {
+      .btn {
+        text-align: center;
+        width: max(150px, 60%);
+        padding-top: .7em;
+        padding-bottom: .7em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    @media (min-width: 992px) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      .price {
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  .price {
+    span:last-child {
+      color: var(--colorSecondary);
     }
   }
 }

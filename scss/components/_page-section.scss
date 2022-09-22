@@ -1,7 +1,10 @@
 .page-section {
 
   &__title {
-    font-size: 45px;
+    font-size: 32px;
+    @media (min-width: 992px) {
+      font-size: 45px;
+    }
     color: var(--sectionColor, var(--colorPrimary));
   }
   &__description {
@@ -21,10 +24,19 @@
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+  @media (max-width: 992px) {
+    justify-content: space-between;
+  }
   h3 {
     color: #000;
-    font-size: 35px;
+    font-size: 24px;
     margin-right: 18px;
+    @media (max-width: 992) {
+      font-size: 30px;
+    }
+    @media (max-width: 1200) {
+      font-size: 35px;
+    }
   }
 
   a {
