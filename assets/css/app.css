@@ -892,21 +892,41 @@ select.form-control option {
   margin-left: auto;
 }
 
-.l-grid-courses > * {
-  margin-bottom: 20px;
+@media (max-width: 1200px) {
+  .slider-courses {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+  }
 }
-@media (min-width: 678px) {
+
+@media (max-width: 1200px) {
   .l-grid-courses {
-    gap: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    width: 400%;
   }
   .l-grid-courses > * {
-    margin-bottom: 0;
+    width: calc(8.3333333333% - 30px);
+    scroll-snap-align: start;
+  }
+  .l-grid-courses > *:not(:last-child) {
+    margin-right: 20px;
   }
 }
-@media (min-width: 992px) {
+@media (max-width: 992px) {
+  .l-grid-courses > * {
+    width: calc(12.5% - 70px);
+  }
+}
+@media (max-width: 768px) {
+  .l-grid-courses > * {
+    width: calc(25% - 70px);
+  }
+}
+@media (min-width: 1200px) {
   .l-grid-courses {
+    display: grid;
+    gap: 20px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
