@@ -6,7 +6,8 @@
     font-weight: 500;
     text-decoration: none;
     color: inherit;
-    &:hover {
+    &:hover,
+    &--active {
       color: var(--colorSecondary);
     }
     &:not(:last-child) {

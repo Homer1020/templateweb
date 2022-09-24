@@ -1,8 +1,15 @@
 .l-courses-layout {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 30px;
+  margin-bottom: 2rem;
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: minmax(270px, auto) 1fr;
+    gap: 30px;
+  }
   &__aside {
+    margin-bottom: 1rem;
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+    }
     .material-input {
       margin-bottom: 1rem;
     }
@@ -14,12 +21,28 @@
       margin-bottom: .5rem;
     }
     .checkbox {
-      margin-bottom: 1rem;
+      margin-bottom: .7rem;
       span {
         font-weight: 500;
         color: var(--gris);
         font-size: 14px;
       }
+    }
+  }
+  &__main {
+    .card {
+      margin-bottom: 30px;
+    }
+    @media (min-width: 768px) {
+      .card {
+        margin-bottom: 0;
+      }
+      gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

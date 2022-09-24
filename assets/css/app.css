@@ -224,7 +224,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.navbar__link:hover {
+.navbar__link:hover, .navbar__link--active {
   color: var(--colorSecondary);
 }
 .navbar__link:not(:last-child) {
@@ -768,6 +768,36 @@ select.form-control option {
   margin: 25px 0 15px;
 }
 
+.breadcrumb {
+  margin: 20px 0;
+}
+.breadcrumb ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.breadcrumb ul li a {
+  color: var(--gris);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  flex: none;
+  align-items: center;
+}
+.breadcrumb ul li:not(:first-child) {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb ul li:not(:first-child)::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  content: "\f105";
+  margin-right: 12px;
+  margin-left: 12px;
+  font-size: 12px;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -932,9 +962,22 @@ select.form-control option {
 }
 
 .l-courses-layout {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 30px;
+  margin-bottom: 2rem;
+}
+@media (min-width: 992px) {
+  .l-courses-layout {
+    display: grid;
+    grid-template-columns: minmax(270px, auto) 1fr;
+    gap: 30px;
+  }
+}
+.l-courses-layout__aside {
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  .l-courses-layout__aside {
+    margin-bottom: 0;
+  }
 }
 .l-courses-layout__aside .material-input {
   margin-bottom: 1rem;
@@ -947,12 +990,30 @@ select.form-control option {
   margin-bottom: 0.5rem;
 }
 .l-courses-layout__aside .checkbox {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 .l-courses-layout__aside .checkbox span {
   font-weight: 500;
   color: var(--gris);
   font-size: 14px;
+}
+.l-courses-layout__main .card {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .l-courses-layout__main {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .l-courses-layout__main .card {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .l-courses-layout__main {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .container {
@@ -981,6 +1042,11 @@ select.form-control option {
 
 .justify-content-between {
   justify-content: space-between;
+}
+
+.fixed-sticky {
+  position: sticky;
+  top: 1rem;
 }
 
 .main {

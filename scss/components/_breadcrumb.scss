@@ -1,0 +1,31 @@
+.breadcrumb {
+  margin: 20px 0;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      a {
+        color: var(--gris);
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: none;
+        display: flex;
+        flex: none;
+        align-items: center;
+      }
+      &:not(:first-child) {
+        display: flex;
+        align-items: center;
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: bold;
+          content: "\f105";
+          margin-right: 12px;
+          margin-left: 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
