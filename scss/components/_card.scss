@@ -153,8 +153,12 @@
         }
       }
       &__title {
-        font-size: 40px;
-        margin-bottom: 20px;
+        font-size: 30px;
+        margin-bottom: 15px;
+        @media (min-width: 992px) {
+          font-size: 40px;
+          margin-bottom: 20px;
+        }
       }
       &__author {
         font-weight: 500;

@@ -7,6 +7,7 @@
 @import 'components/site-header';
 @import 'components/site-footer';
 @import 'components/navbar';
+@import 'components/top-bar';
 
 // COMPONENTS
 @import 'components/btn';
@@ -21,6 +22,7 @@
 @import 'components/card-icon';
 @import 'components/breadcrumb';
 @import 'components/tabs';
+@import 'components/cart';
 
 // LAYOUT
 @import 'layout/grid';
@@ -65,6 +67,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+.detail {
+  &__form {
+    @media (min-width: 992px) {
+      margin-right: 70px;
     }
   }
 }

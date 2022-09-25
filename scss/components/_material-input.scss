@@ -77,12 +77,22 @@ select.form-control {
 
 .select {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
   i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 1rem;
     color: #fff;
+  }
+  &--alt {
+    .form-control {
+      background-color: transparent;
+      color: var(--colorSecondary);
+      border-color: var(--colorSecondary);
+    }
+    i {
+      color: var(--colorSecondary);
+    }
   }
 }

@@ -59,6 +59,16 @@ a {
   color: var(--colorPrimary);
 }
 
+table {
+  width: 100%;
+}
+
+input:disabled,
+button:disabled,
+a:disabled {
+  opacity: 0.5;
+}
+
 .site-header {
   background-color: var(--colorPrimary, lightseagreen);
   color: white;
@@ -293,6 +303,73 @@ a {
   }
 }
 
+.top-bar {
+  color: #fff;
+  background-color: #1C1C1E;
+  position: relative;
+}
+.top-bar > .fa-times {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  top: 1.5rem;
+}
+@media (min-width: 600px) {
+  .top-bar > .fa-times {
+    right: 3rem;
+    top: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  .top-bar > .fa-times {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.top-bar .container > p {
+  font-size: 14px;
+}
+@media (max-width: 992px) {
+  .top-bar .container > p {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .top-bar .container {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.top-bar__right {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  .top-bar__right {
+    position: relative;
+    width: 105%;
+    left: -2.5%;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--gris);
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+.top-bar__right p {
+  font-weight: bold;
+}
+.top-bar__right .btn {
+  padding: 0.5em 1.5em;
+  margin-left: 60px;
+}
+
 .btn {
   display: inline-block;
   padding: 7px 20px;
@@ -434,7 +511,7 @@ a {
   padding: 25px 20px 35px;
 }
 .hero-form .material-input {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 .hero-form .btn {
   padding: 0.7em 4em;
@@ -580,8 +657,14 @@ a {
   }
 }
 .card--course-desc .card__title {
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  .card--course-desc .card__title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
 }
 .card--course-desc .card__author {
   font-weight: 500;
@@ -842,7 +925,7 @@ select.form-control option {
 
 .select {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 .select i {
   position: absolute;
@@ -850,6 +933,14 @@ select.form-control option {
   transform: translateY(-50%);
   right: 1rem;
   color: #fff;
+}
+.select--alt .form-control {
+  background-color: transparent;
+  color: var(--colorSecondary);
+  border-color: var(--colorSecondary);
+}
+.select--alt i {
+  color: var(--colorSecondary);
 }
 
 .checkbox {
@@ -859,6 +950,7 @@ select.form-control option {
 }
 .checkbox input[type=checkbox] {
   border-radius: 0;
+  color: var(--colorPrimary);
 }
 .checkbox span {
   margin-left: 10px;
@@ -889,6 +981,7 @@ select.form-control option {
   list-style: none;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .breadcrumb ul li a {
   color: var(--gris);
@@ -971,6 +1064,160 @@ select.form-control option {
 .tabs h2,
 .tabs p {
   margin: 0.5rem 0;
+}
+
+.cart-btn {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--colorPrimary);
+  color: #FFF;
+  padding: 0.75rem 0.95rem;
+  display: inline-flex;
+  text-align: center;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.cart-btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  flex-grow: 1;
+  font-weight: 500;
+}
+.cart-total {
+  line-height: 1.4;
+  text-align: right;
+}
+.cart-total span:first-child {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.cart-total.subtotal span:last-child {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.cart-total.per-off span:last-child {
+  color: red;
+  font-size: 20px;
+  font-weight: 700;
+}
+.cart-total.total span:last-child {
+  color: #34c759;
+  font-size: 20px;
+  font-weight: 700;
+}
+.cart-nav {
+  margin-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cart-nav a {
+  margin-bottom: 15px;
+  flex-grow: 1;
+  color: var(--black);
+  text-decoration: none;
+  opacity: 0.2;
+}
+.cart-nav a.active {
+  opacity: 1;
+}
+.cart-nav a span {
+  display: block;
+  line-height: 1;
+}
+.cart-nav a span:first-child {
+  font-size: 65px;
+  font-weight: 700;
+}
+.cart-nav a span:nth-child(2) {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.cart-nav a span:last-child {
+  font-size: 1rem;
+}
+.cart-table {
+  margin-bottom: 15px;
+  border-collapse: collapse;
+  background-color: #FFF;
+  padding: 0.5rem;
+  width: 100%;
+  border: 0 none;
+}
+.cart-table thead th {
+  background-color: #f8f9fa;
+  text-transform: uppercase;
+  color: var(--black);
+  padding: 1rem;
+}
+.cart-table thead th:last-child {
+  text-align: right;
+}
+.cart-table thead th:first-child {
+  text-align: left;
+}
+.cart-table__delete {
+  text-align: center;
+}
+.cart-table__delete i {
+  color: #ccc;
+}
+.cart-table__total {
+  text-align: right;
+}
+.cart-table__total p {
+  font-size: 18px;
+  color: #34c759;
+  font-weight: 700;
+}
+.cart-table__item {
+  text-align: left;
+}
+.cart-table__item a {
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+}
+.cart-table__item a img {
+  margin-right: 15px;
+}
+@media (max-width: 567px) {
+  .cart-table__item a img {
+    display: none;
+  }
+}
+.cart-table__item a p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gris);
+  display: block;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+.cart-table td {
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem;
+}
+.cart-table--small {
+  font-size: 14px;
+}
+.cart-table--small thead th {
+  padding: 10px;
+  font-size: 14px;
+}
+.cart-table--small strong {
+  color: var(--gris);
+}
+.cart-table--small td {
+  padding: 10px;
+}
+.cart-table--small td:last-child {
+  text-align: right;
 }
 
 .grid {
@@ -1226,7 +1473,7 @@ select.form-control option {
     grid-template-columns: 1fr 360px;
   }
 }
-.l-page-generic .hero-form {
+.l-page-generic .hero-form:not(.shadow) {
   box-shadow: none !important;
 }
 
@@ -1263,6 +1510,37 @@ select.form-control option {
   top: 1rem;
 }
 
+.fw5 {
+  font-weight: 500;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.tal {
+  text-align: left;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(151, 151, 151, 0.5);
+}
+
+.d-none {
+  display: none;
+}
+
+.for-clients {
+  font-weight: 500 !important;
+  font-size: 18px;
+  font-family: poppins, sans-serif;
+  padding: 5px 20px 20px;
+}
+.for-clients a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--colorPrimary);
+}
+
 .main {
   padding: 5rem 0;
 }
@@ -1296,6 +1574,12 @@ select.form-control option {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .detail__form {
+    margin-right: 70px;
+  }
 }
 
 /* Style the buttons that are used to open and close the accordion panel */

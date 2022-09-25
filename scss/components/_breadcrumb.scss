@@ -4,6 +4,7 @@
     list-style: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     li {
       a {
         color: var(--gris);

@@ -44,3 +44,15 @@ strong {
 a {
   color: var(--colorPrimary);
 }
+
+table {
+  width: 100%;
+}
+
+input,
+button,
+a {
+  &:disabled {
+    opacity: 0.5;
+  }
+}

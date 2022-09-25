@@ -29,3 +29,34 @@
   position: sticky;
   top: 1rem;
 }
+
+.fw5 {
+  font-weight: 500;
+}
+
+.fwb {
+  font-weight: bold;
+}
+
+.tal {
+  text-align: left;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgb(151, 151, 151, .5);
+}
+
+.d-none {
+  display: none;
+}
+
+.for-clients {
+  font-weight: 500 !important;
+  font-size: 18px;
+  font-family: poppins,sans-serif;
+  padding: 5px 20px 20px;
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--colorPrimary);
+  }
+}
