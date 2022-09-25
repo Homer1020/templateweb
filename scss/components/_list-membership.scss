@@ -10,7 +10,8 @@
     &::before {
       font-family: "Font Awesome 5 Free"; font-weight: 400; content: "\f005";
       margin-right: 10px;
-      color: var(--colorSecondary);
+      // color: var(--colorSecondary);
+      color: #fff;
     }
   }
 }

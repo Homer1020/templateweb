@@ -1,0 +1,14 @@
+.l-page-generic {
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 360px;
+  }
+
+  .hero-form {
+    box-shadow: none !important;
+  }
+}

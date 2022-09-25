@@ -1,6 +1,6 @@
 .membership {
   color: #fff;
-  background-color: var(--gris);
+  background-color: var(--colorPrimary);
   padding: 15px;
   margin-bottom: 2rem;
   img {
@@ -15,7 +15,8 @@
   &__title {
     font-size: 30px;
     margin-bottom: 30px;
-    color: var(--colorSecondary);
+    // color: var(--colorSecondary);
+    color: #fff;
     @media (min-width: 992px) {
       font-size: 38px;
     }
@@ -55,7 +56,8 @@
 
   .price {
     span:last-child {
-      color: var(--colorSecondary);
+      // color: var(--colorSecondary);
+      color: #fff;
     }
   }
 }

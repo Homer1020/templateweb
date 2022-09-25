@@ -59,6 +59,19 @@
     background-color: var(--colorSecondary);
   }
 
+  &--primary {
+    color: #fff;
+    border-color: var(--colorPrimary);
+    background-color: var(--colorPrimary);
+  }
+
+  &--white {
+    color: var(--colorPrimary);
+    border-color: #fff;
+    background-color: #fff;
+  }
+
+
   &--whatsapp {
     background-color: #34C759;
     border-color: #34C759;
