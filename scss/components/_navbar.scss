@@ -54,6 +54,11 @@
       display: block;
       border-bottom: 1px solid #fff;
       margin: 0 25px;
+      &.navbar__link--active,
+      &:hover {
+        color: #fff !important;
+        text-shadow: 3px 3px 7px rgba(0, 0, 0, .5) !important;
+      }
     }
 
     &__mobile-close {

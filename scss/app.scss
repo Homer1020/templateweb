@@ -23,6 +23,7 @@
 @import 'components/breadcrumb';
 @import 'components/tabs';
 @import 'components/cart';
+@import 'components/modal';
 
 // LAYOUT
 @import 'layout/grid';
@@ -31,6 +32,27 @@
 @import 'layout/l-courses-layout';
 @import 'layout/l-grid-page';
 @import 'layout/l-page-generic';
+.l-form-modal {
+  display: grid;
+  column-gap: 20px;
+  row-gap: 0px;
+  grid-template-columns: 1fr;
+  &__full {
+    margin-bottom: 0.5rem;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+    &__full {
+      grid-column: 1/3;
+    }
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    &__full {
+      grid-column: 1/4;
+    }
+  }
+}
 
 // UTILITIES
 @import 'utilities';

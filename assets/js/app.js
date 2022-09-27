@@ -88,6 +88,14 @@ $('#whychoseus').owlCarousel({
 				e.preventDefault();
 				const targetId = e.target.getAttribute('href');
 				const itemTarget = this.tabs.querySelector(targetId);
+
+        this.tabsItems.forEach(t => {
+          if(t.classList.contains('tab-active')) {
+            t.classList.remove('tab-active')
+          }
+        })
+        itemTarget.classList.add('tab-active');
+
 				this.tabsNav.querySelectorAll('.nav-link').forEach(link => {
 					if(link.classList.contains('active')) {
 						link.classList.remove('active');
@@ -102,7 +110,8 @@ $('#whychoseus').owlCarousel({
 	}
 }
 
-new Tabs();
+new Tabs('#tabs');
+new Tabs('#auth-tabs');
 
 var acc = document.querySelectorAll(".accordion header");
 var i;
@@ -120,6 +129,36 @@ for (i = 0; i < acc.length; i++) {
 }
 
 /**
+ * Modal
+ */
+
+ class Modal {
+  constructor(selector) {
+    this.buttons = Array.from(document.querySelectorAll(`[data-modal = "${selector}"]`));
+    this.modal = document.querySelector(selector);
+    this.events();
+  }
+  events() {
+    this.buttons.forEach(button => {
+      button.addEventListener('click', e => {
+        e.preventDefault();
+        this.modal.classList.add('show');
+      });
+    });
+    this.modal.querySelector('.modal-button-close').addEventListener('click', () => {
+      modal.classList.remove('show');
+    });
+    this.modal.addEventListener('click', e => {
+      if(e.target.classList.contains('modal')) {
+        this.modal.classList.remove('show');
+      }
+    })
+  }
+}
+
+new Modal('#modal');
+
+/**
  * Contador
  */
  document.addEventListener('DOMContentLoaded', () => { 
@@ -127,7 +166,7 @@ for (i = 0; i < acc.length; i++) {
   //===
   // VARIABLES
   //===
-  const DATE_TARGET = new Date('09/26/2022 0:01 AM');
+  const DATE_TARGET = new Date('09/30/2022 0:01 AM');
   // DOM for render
   const SPAN_DAYS = document.querySelector('span#days');
   const SPAN_HOURS = document.querySelector('span#hours');
