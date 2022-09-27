@@ -2,16 +2,14 @@
   &__link {
     font-size: 1rem;
     display: inline-block;
-    padding: 22px 0;
+    padding: 22px 15px;
     font-weight: 500;
     text-decoration: none;
     color: inherit;
-    &:hover,
-    &--active {
-      color: var(--colorSecondary);
-    }
-    &:not(:last-child) {
-      margin-right: 30px;
+    margin-right: -4px;
+    &.navbar__link--active,
+    &:hover {
+      background-color: rgba(#fff, .2);
     }
   }
   
@@ -54,11 +52,6 @@
       display: block;
       border-bottom: 1px solid #fff;
       margin: 0 25px;
-      &.navbar__link--active,
-      &:hover {
-        color: #fff !important;
-        text-shadow: 3px 3px 7px rgba(0, 0, 0, .5) !important;
-      }
     }
 
     &__mobile-close {
@@ -74,6 +67,9 @@
     }
 
     &__mobile-header {
+      &:hover {
+        background-color: transparent !important;
+      }
       display: flex !important;
       border: none !important;
       padding-bottom: 0;

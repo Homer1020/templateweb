@@ -29,6 +29,13 @@ body {
   background-color: #e5e5e5;
   color: var(--gris);
 }
+@media (min-width: 992px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+}
 
 p {
   line-height: 1.4;
@@ -139,7 +146,7 @@ a:disabled {
   justify-content: flex-start;
 }
 .site-header .brand {
-  margin-right: 30px;
+  margin-right: 15px;
   color: #fff;
   text-decoration: none;
   font-weight: 800;
@@ -229,16 +236,14 @@ a:disabled {
 .navbar__link {
   font-size: 1rem;
   display: inline-block;
-  padding: 22px 0;
+  padding: 22px 15px;
   font-weight: 500;
   text-decoration: none;
   color: inherit;
+  margin-right: -4px;
 }
-.navbar__link:hover, .navbar__link--active {
-  color: var(--colorSecondary);
-}
-.navbar__link:not(:last-child) {
-  margin-right: 30px;
+.navbar__link.navbar__link--active, .navbar__link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .navbar__toggler {
   cursor: pointer;
@@ -281,10 +286,6 @@ a:disabled {
     border-bottom: 1px solid #fff;
     margin: 0 25px;
   }
-  .navbar .navbar__link.navbar__link--active, .navbar .navbar__link:hover {
-    color: #fff !important;
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5) !important;
-  }
   .navbar__mobile-close {
     cursor: pointer;
     display: flex;
@@ -300,6 +301,9 @@ a:disabled {
     display: flex !important;
     border: none !important;
     padding-bottom: 0;
+  }
+  .navbar__mobile-header:hover {
+    background-color: transparent !important;
   }
   .navbar__mobile-header .fa {
     display: block;
@@ -1668,6 +1672,26 @@ select.form-control option {
 
 .d-iflex {
   display: inline-flex;
+}
+
+.termns {
+  margin-bottom: 2rem;
+}
+.termns h2 {
+  font-size: 1rem;
+}
+.termns h2,
+.termns p,
+.termns ul,
+.termns ol {
+  margin: 0.5rem 0;
+}
+.termns ul,
+.termns ol {
+  padding-left: 2rem;
+}
+.termns a {
+  text-decoration: none;
 }
 
 .main {

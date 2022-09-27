@@ -57,6 +57,26 @@
 // UTILITIES
 @import 'utilities';
 
+.termns {
+  margin-bottom: 2rem;
+  h2 {
+    font-size: 1rem;
+  }
+  h2,
+  p,
+  ul,
+  ol {
+    margin: .5rem 0;
+  }
+  ul,
+  ol {
+    padding-left: 2rem;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
 .main {
   padding: 5rem 0;
 }
