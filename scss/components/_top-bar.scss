@@ -58,6 +58,14 @@
     .btn {
       padding: .5em 1.5em;
       margin-left: 60px;
+      background-color: #f7ff00;
+      border-color: #f7ff00;
+      color: var(--black);
+      &:hover {
+        background-color: #d6dd02;
+        border-color: #d6dd02;
+        color: var(--black);
+      }
     }
   }
 }

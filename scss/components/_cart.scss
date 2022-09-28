@@ -18,6 +18,11 @@
       flex-grow: 1;
       font-weight: 500;
     }
+    &--lg {
+      font-weight: 500;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
   }
   &-total {
     line-height: 1.4;

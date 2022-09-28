@@ -172,8 +172,8 @@
       &__img {
         &::after {
           background-image: linear-gradient(
-            rgba($colorPrimary, .7),
-            rgba($colorPrimary, .7)
+            rgba($colorPrimary, .4),
+            rgba($colorPrimary, .4)
           );
         }
         &-title {

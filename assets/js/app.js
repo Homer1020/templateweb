@@ -134,9 +134,11 @@ for (i = 0; i < acc.length; i++) {
 
  class Modal {
   constructor(selector) {
-    this.buttons = Array.from(document.querySelectorAll(`[data-modal = "${selector}"]`));
-    this.modal = document.querySelector(selector);
-    this.events();
+    if(document.querySelector(selector)) {
+      this.buttons = Array.from(document.querySelectorAll(`[data-modal = "${selector}"]`));
+      this.modal = document.querySelector(selector);
+      this.events();
+    }
   }
   events() {
     this.buttons.forEach(button => {
@@ -146,7 +148,7 @@ for (i = 0; i < acc.length; i++) {
       });
     });
     this.modal.querySelector('.modal-button-close').addEventListener('click', () => {
-      modal.classList.remove('show');
+      this.modal.classList.remove('show');
     });
     this.modal.addEventListener('click', e => {
       if(e.target.classList.contains('modal')) {
@@ -157,6 +159,7 @@ for (i = 0; i < acc.length; i++) {
 }
 
 new Modal('#modal');
+new Modal('#modal-cart');
 
 /**
  * Contador
@@ -202,10 +205,12 @@ new Modal('#modal');
       SPAN_SECONDS.textContent = REMAINING_SECONDS;
   }
 
-  //===
-  // INIT
-  //===
-  updateCountdown();
-  // Refresh every second
-  setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+  if(SPAN_DAYS) {
+    //===
+    // INIT
+    //===
+    updateCountdown();
+    // Refresh every second
+    setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+  }
 });

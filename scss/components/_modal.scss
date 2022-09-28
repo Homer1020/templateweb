@@ -12,6 +12,29 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity .3s;
+  &--cart {
+    .modal-content {
+      width: min(900px, 90%) !important;
+      max-width: 900px !important;
+    }
+    .link {
+      background-color: transparent;
+      border: 0;
+      appearance: none;
+      text-align: center;
+      width: 100%;
+      font-weight: 700;
+      color: var(--violeta);
+      margin-top: 20px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      i {
+        margin-left: 10px;
+      }
+    }
+  }
 }
 .modal.show {
   z-index: 1000;

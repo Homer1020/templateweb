@@ -130,7 +130,7 @@ a:disabled {
   font-size: 13px;
   top: -10px;
   right: -10px;
-  background-color: var(--colorSecondary);
+  background-color: #f7ff00;
   position: absolute;
   width: 18px;
   height: 18px;
@@ -376,6 +376,14 @@ a:disabled {
 .top-bar__right .btn {
   padding: 0.5em 1.5em;
   margin-left: 60px;
+  background-color: #f7ff00;
+  border-color: #f7ff00;
+  color: var(--black);
+}
+.top-bar__right .btn:hover {
+  background-color: #d6dd02;
+  border-color: #d6dd02;
+  color: var(--black);
 }
 
 .btn {
@@ -389,6 +397,13 @@ a:disabled {
   cursor: pointer;
   border-width: 2px;
   border-style: solid;
+}
+.btn--lg {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 100px;
 }
 .btn--full {
   flex-grow: 1;
@@ -684,7 +699,7 @@ a:disabled {
   font-size: 1rem !important;
 }
 .card--course-desc .card__img::after {
-  background-image: linear-gradient(rgba(191, 14, 9, 0.7), rgba(191, 14, 9, 0.7));
+  background-image: linear-gradient(rgba(191, 14, 9, 0.4), rgba(191, 14, 9, 0.4));
 }
 .card--course-desc .card__img-title {
   font-size: 20px;
@@ -875,6 +890,9 @@ input:focus, textarea:focus, button:focus {
 .material-input--primary input {
   border-color: var(--colorPrimary);
 }
+.material-input--plomo input {
+  border-color: var(--gris);
+}
 .material-input label {
   font-weight: 500;
   text-align: left;
@@ -899,6 +917,10 @@ input:focus, textarea:focus, button:focus {
 .material-input--primary input:focus + label,
 .material-input--primary input.non-empty + label {
   color: var(--colorPrimary);
+}
+.material-input--plomo input:focus + label,
+.material-input--plomo input.non-empty + label {
+  color: var(--gris);
 }
 .material-input input.non-empty:valid + label {
   color: seagreen;
@@ -1134,6 +1156,11 @@ select.form-control option {
   flex-grow: 1;
   font-weight: 500;
 }
+.cart-btn--lg {
+  font-weight: 500;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 .cart-total {
   line-height: 1.4;
   text-align: right;
@@ -1282,6 +1309,27 @@ select.form-control option {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
+}
+.modal--cart .modal-content {
+  width: min(900px, 90%) !important;
+  max-width: 900px !important;
+}
+.modal--cart .link {
+  background-color: transparent;
+  border: 0;
+  appearance: none;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  color: var(--violeta);
+  margin-top: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.modal--cart .link i {
+  margin-left: 10px;
 }
 
 .modal.show {
@@ -1580,6 +1628,63 @@ select.form-control option {
   box-shadow: none !important;
 }
 
+@media (min-width: 992px) {
+  .l-cart-modal__main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+  }
+}
+.l-cart-modal__main > div:first-child {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.l-cart-modal__prices p {
+  padding: 1rem 0;
+  font-size: 1rem !important;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.l-cart-modal__prices p:first-child span:last-child {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.l-cart-modal__prices p:last-child span:last-child {
+  color: #34c759;
+  font-size: 20px;
+  font-weight: 700;
+}
+.l-cart-modal__prices p:not(:last-child) {
+  border-bottom: 1px solid #c3cbd6;
+}
+
+.cart-item {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #c3cbd6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.cart-item h3 {
+  font-weight: normal;
+}
+.cart-item .price {
+  font-size: 16px;
+  color: #34c759;
+  font-weight: 700;
+}
+.cart-item__img {
+  margin-right: 10px;
+}
+.cart-item__delete {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 18px;
+}
+
 .l-form-modal {
   display: grid;
   column-gap: 20px;
@@ -1869,6 +1974,57 @@ select.form-control option {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.list {
+  padding-left: 1.2rem;
+  color: var(--gris);
+}
+.list li {
+  margin-bottom: 0.5rem;
+}
+.list strong {
+  color: var(--black);
+}
+
+.p,
+.ul {
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .links-password {
+    display: flex;
+  }
+}
+.links-password__link {
+  margin-bottom: 0.5rem;
+  background-color: #CCC;
+  padding: 12px 15px;
+  margin-right: 0.2rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #343434;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .links-password__link {
+    margin-bottom: 0;
+  }
+}
+.links-password__link.active {
+  background-color: #333;
+  color: #FFF;
 }
 
 /*# sourceMappingURL=app.css.map */

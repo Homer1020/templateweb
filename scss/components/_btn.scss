@@ -10,6 +10,14 @@
   border-width: 2px;
   border-style: solid;
 
+  &--lg {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 100px;
+  }
+
   &--full {
     flex-grow: 1;
     display: flex;
